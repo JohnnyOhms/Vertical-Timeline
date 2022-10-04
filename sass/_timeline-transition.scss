@@ -5,11 +5,11 @@
             opacity: 0;
         }
 
-    &:nth-child(odd) div{
+    &:nth-child(odd) .timeline__section{
         transform: translateX(100%);
     }
 
-    &:nth-child(even) div {
+    &:nth-child(even) .timeline__section{
         transform: translateX(-100%);
     }
 }
@@ -20,4 +20,3 @@
     opacity: 1;
     transform: translateX(0);
 }
-
