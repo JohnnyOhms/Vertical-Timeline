@@ -1,0 +1,58 @@
+@include tablet-view {
+.timeline__list{
+    &-item{
+        .timeline__section{
+            width: 17rem;
+            height: 12rem;
+        }
+
+        &:nth-child(even) div{
+            right: 26rem;
+        }
+    }
+}
+}
+
+@include mobile-view{
+.timeline__list {
+        margin: 1rem;  
+
+        &-item {
+            margin: 0;
+
+            &::after{
+                bottom: 25px;
+            }
+
+            .timeline__section {
+                width: 17rem;
+                height: 11rem;
+                padding: .6rem;
+            }
+
+            #space {
+                padding-bottom: 1.7rem;
+            }
+
+            &:nth-child(even) div{
+                right: 18px;
+            }
+
+            &:nth-child(even) div::after{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: -33px;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-right: 30px solid $color-secondary;
+                border-bottom: 15px solid transparent;
+            }
+
+            &:nth-child(even) div::before{
+                visibility: hidden;
+            }
+        }
+    }
+}

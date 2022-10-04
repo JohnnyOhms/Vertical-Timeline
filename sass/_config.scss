@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+};
+
+$color-black: #000;
+$color-grey: #3a333312;
+$color-secondary: #005490;
+
+@function set-text-color( $color ) {
+@if( lightness( $color ) > 40% ){
+    @return #000;
+} @else{
+    @return #fff;
+}
+};
+
+@mixin transition {
+    transition: all .9s ease;  
+};
+
+@mixin tablet-view {
+    @media screen and (max-width: 900px){
+        @content;
+    }
+};
+
+@mixin mobile-view {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}

@@ -1,0 +1,48 @@
+.timeline__list-item{
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $color-secondary;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+    }
+
+    &:nth-child(odd) div{
+        right: 18px;
+    }
+
+    &:nth-child(even) div{
+        right: 39rem
+    }
+
+    &:nth-child(odd) div::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: -33px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-right: 30px solid $color-secondary;
+        border-bottom: 15px solid transparent;
+
+ 
+    }
+
+    &:nth-child(even) div::before{
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        right: -36px ;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-left: 30px solid $color-secondary;
+        border-bottom: 15px solid transparent;
+    }
+     
+}

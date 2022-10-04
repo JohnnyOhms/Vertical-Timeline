@@ -1,0 +1,26 @@
+@import "./config";
+@import "./head";
+@import "./tmeline";
+@import "./timeline-psuedo-class";
+@import "./timeline-transition";
+@import "./responsive";
+
+body{
+    background-color: black;
+    color: set-text-color($color-black);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+
+    .timeline{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+    }
+
+    time{
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
