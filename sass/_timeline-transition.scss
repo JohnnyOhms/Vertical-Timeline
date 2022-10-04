@@ -4,8 +4,9 @@
             visibility: hidden;
             opacity: 0;
         }
+
     &:nth-child(odd) div{
-        transform: translateX( 100%);
+        transform: translateX(100%);
     }
 
     &:nth-child(even) div {
@@ -13,14 +14,10 @@
     }
 }
 
-//classList to add from Javascript
-.timeline__list-item{
-    .timeline__section{
-        .slide-in{
-            visibility: visible;
-            opacity: 1;
-            transition: none;
-        }
-    }
+// scss class to be add in javascript
+.timeline__list-item.slide-in .timeline__section{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
 }
 

@@ -87,7 +87,7 @@
 }
 
 .timeline__list-item .timeline__section {
-  transition: all 0.9s ease;
+  transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
 }
@@ -98,10 +98,10 @@
   transform: translateX(-100%);
 }
 
-.timeline__list-item .timeline__section .slide-in {
+.timeline__list-item.slide-in .timeline__section {
   visibility: visible;
   opacity: 1;
-  transition: none;
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 900px) {
